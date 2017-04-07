@@ -14,6 +14,7 @@ public interface RegroupementDao {
 	public Regroupement save(Regroupement regroupement);
 	public boolean isEnAttente(Long idRegroupement);
 	public boolean isClos(Long idRegroupement);
+	public Regroupement getRegroupementWithEvenements(long idRegroupement);
 	
 	//must be implemented ... by application (not JpaRepository) !
 	public boolean isEnCours(long idRegroupement);

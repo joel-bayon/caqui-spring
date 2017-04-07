@@ -14,5 +14,9 @@ public interface RegroupementJpa extends JpaRepository<Regroupement, Long>{ // o
 	@Query("select case when (count(*) = 0) then true else false end"
 			+ " from Regroupement r join r.evenements e where r.id = ?1 and e.etat <> fr.rte_france.caqui.entity.Etat.EN_ATTENTE")
 	public boolean isEnAttente(long idRegroupement);
+	
+	@Query("select r from Regroupement r JOIN FETCH r.evenements e where r.id=?1")
+	public Regroupement getRegroupementWithEvenements(long idRegroupement);
+
 
 }

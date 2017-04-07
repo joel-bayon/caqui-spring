@@ -79,5 +79,10 @@ public class GererRegroupementImpl implements GererRegroupement{
 		regroupementDao.save(regroupement);
 	}
 
+	@Override
+	public Regroupement getRegroupementWithEvenements(Long id) {
+		return regroupementDao.getRegroupementWithEvenements(id);
+	}
+
 	
 }

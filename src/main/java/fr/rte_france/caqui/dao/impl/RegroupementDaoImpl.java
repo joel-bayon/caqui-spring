@@ -56,6 +56,12 @@ public class RegroupementDaoImpl implements RegroupementDao {
 		// TODO Auto-generated method stub
 		return  (! daoJpa.isClos(idRegroupement)) && (!daoJpa.isEnAttente(idRegroupement));
 	}
+
+	@Override
+	public Regroupement getRegroupementWithEvenements(long idRegroupement) {
+		// TODO Auto-generated method stub
+		return daoJpa.getRegroupementWithEvenements(idRegroupement);
+	}
 	
 
 }

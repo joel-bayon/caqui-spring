@@ -11,5 +11,7 @@ public interface GererRegroupement {
 
 	public Regroupement creerRegroupement(String type, String libelle, Date debut, List<Evenement> evenements) throws CaquiException;
 	public void ajouterEvenement(long idRegroupement, Evenement evenement) throws CaquiException;
-	public void cloturerRegroupement(long idRegroupement); 
+	public void cloturerRegroupement(long idRegroupement);
+	public Regroupement getRegroupementWithEvenements(Long id); 
+	
 }
